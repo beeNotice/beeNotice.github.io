@@ -1,0 +1,30 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body { 
+	font-family: 'Ubuntu', sans-serif; 
+	margin-bottom: $footer-size;
+}
+
+#wrap > .container {
+  padding: $footer-size 15px 0;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: $footer-size;
+  background-color: #f5f5f5;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: 'Varela Round', sans-serif;
+    a { color: inherit; }
+}
+
+a.dropdown-toggle { cursor: pointer; }
+.pointer { cursor: pointer; }
+.no-style { list-style: none; } 
