@@ -1,0 +1,30 @@
+---
+layout: default
+title: Search
+---
+
+<div class="row">
+
+	<div class="page-title-link"></div>
+
+	<div id="search-results"></div>
+
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+<script src="{{ "/js/search.js" | prepend: site.baseurl }}"></script>
+
+<script type="text/javascript">
+	var posts = [];
+	{% for post in site.posts %}
+	posts.push({
+		title: {{ post.title | jsonify }},
+		excerpt: {{ post.excerpt | jsonify }},
+		categories: {{ post.categories | jsonify }},
+		tags: {{ post.tags | jsonify }},
+		url: {{ post.url | jsonify }}
+	});
+	{% endfor %}
+	search(posts);
+</script>
