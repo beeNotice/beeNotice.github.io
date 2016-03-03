@@ -1,30 +1,41 @@
 var postTemplate = _.template(
-	['<div class="article-row">',
-	' <article class="article article-summary full-width">',
-	'   <div class="article-summary-inner">',
-	'      <h2 class="article-title">',
-	'        <a href="<%= post.url %>" class="title"><%= post.title %></a>',
-	'      </h2>',
-	'      <p class="article-excerpt">',
-	'        <%= post.excerpt %>',
-	'      </p>',
-	'    </div>',
-	'  </article>',
-	'</div>'].join(''));
+	[
+		'<div class="col-sm-12">',
+		'  <div class="article-description">',
+		'		<div>',
+		'        <b><a href="<%= post.url %>"><%= post.title %></a></b>',
+		'      	<small class="color-grey"><em>&nbsp;&nbsp;<%= post.date %></em></small>',
+		'  	</div>',
+		'		<div><%= post.excerpt %></div>',
+		'		<div>',
+		'			<% for (i in post.categories) { %>',
+		'			<span class="label label-info"><%=  post.categories[i] %></span>&nbsp;',
+		'			<% } %>',
+		'			<% for (i in post.tags) { %>',
+		'			<span class="label label-primary"><%= post.tags[i] %></span>&nbsp;',
+		'			<% } %>',
+		'		</div>',
+		'	</div>',
+		'	<hr/>',
+		'</div>'
+	].join(''));
 
 var search = function(posts) {
 
 	var queryParams = (function(queries) {
-		if (queries == "")
+		
+		if (queries == ""){
 			return {};
+		}
 
 		var params = {};
 		for (var i = 0; i < queries.length; ++i) {
 			var param = queries[i].split('=', 2);
-			if (param.length == 1)
+			if (param.length == 1){
 				params[param[0]] = "";
-			else
+			} else {
 				params[param[0]] = decodeURIComponent(param[1].replace(/\+/g, " "));
+			}
 		}
 		return params;
 	})(window.location.search.substr(1).split('&'));
@@ -47,7 +58,7 @@ var search = function(posts) {
 		|| post.excerpt.match(searchRegex)
 		|| post.title.match(searchRegex);
 	})
-	.forEach(function(matchingPost) {
-		$('#search-results').append(postTemplate({post: matchingPost}));
+	.forEach(function(matchingPost, index) {
+		$('#search-results').append(postTemplate({post: matchingPost, loopindex: index}));
 	});
 }
