@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+<div id="article-head">
+	<div class="lead">
+		{{ page.excerpt }}
+	</div>
+	<div>
+		{% include categories.html post=page %}
+	</div>
+	<hr/>
+</div>
+
+{{ content }}

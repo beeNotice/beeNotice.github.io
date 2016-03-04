@@ -6,9 +6,17 @@
 @import "variables";
 @import "commons";
 
-.article-description div { padding: 8px 0; }
 .color-grey { color: #777; }
+.no-border { border: none; }
+
 #footer-content { text-align: center; }
+
+#article-head {
+	.lead { margin-bottom: 10px; }
+	hr { margin-top: 10px; }
+}
+
 .social-icon { padding: 1px 10px 0 0; }
+.article-description div { padding: 8px 0; }
 
 @import "syntax-highlighting";

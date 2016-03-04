@@ -8,27 +8,22 @@
 
 	<div class="col-sm-6">
 
-		<img src="http://placehold.it/400x240&amp;text=[img]">
+		<div class="thumbnail no-border">
 
-		<div class="article-description">
+			<img src="http://placehold.it/450x250&amp;text=[img]">
 
-			<div>
-				<b><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></b>
-				<small class="color-grey"><em>&nbsp;&nbsp;{{ post.date | date: "%d/%m/%Y" }}</em></small>
+			<div class="article-description caption">
+
+				<div>
+					<b><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></b>
+					<small class="color-grey"><em>&nbsp;&nbsp;{{ post.date | date: "%d/%m/%Y" }}</em></small>
+				</div>
+
+				<div>{{ post.excerpt }}</div>
+
+				<div>{% include categories.html post=post %}</div>
+
 			</div>
-
-			<div>{{ post.excerpt }}</div>
-
-			<div>
-				{% for category in post.categories %}
-				<span class="label label-info">{{ category }}</span>&nbsp;
-				{% endfor %}
-
-				{% for tag in post.tags %}
-				<span class="label label-primary">{{ tag }}</span>&nbsp;
-				{% endfor %}
-			</div>
-
 		</div>
 	</div>
 

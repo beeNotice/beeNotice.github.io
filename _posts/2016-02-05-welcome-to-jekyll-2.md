@@ -1,10 +1,10 @@
 ---
-layout: default
+layout: article
 title:  "Welcome to Jekyll 2 !"
 date:   2016-02-05
 categories: [java]
 tags: [test, beeNotice]
-excerpt: Simple description 2
+excerpt: Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression.<br/> Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 

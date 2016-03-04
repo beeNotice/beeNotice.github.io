@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: article
 title:  "Welcome to Jekyll!"
 date:   2016-02-04
 categories: [git]

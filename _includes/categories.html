@@ -1,0 +1,8 @@
+
+{% for category in include.post.categories %}
+<span class="label label-info">{{ category }}</span>&nbsp;
+{% endfor %}
+
+{% for tag in include.post.tags %}
+<span class="label label-primary">{{ tag }}</span>&nbsp;
+{% endfor %}
