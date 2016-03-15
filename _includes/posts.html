@@ -10,7 +10,12 @@
 
 		<div class="thumbnail no-border">
 
-			<img src="http://placehold.it/450x250&amp;text=[img]">
+			{% if post.image %}
+			<img src="{{ post.image | prepend: site.baseurl }}" alt="{{ post.title }}">
+			{% else %}
+			<img src="http://placehold.it/450x250&amp;text=[img]" alt="{{ post.title }}">
+			{% endif %}
+			
 
 			<div class="article-description caption">
 

@@ -1,8 +1,8 @@
-title: beeNotice's blog
-description: Yet Another ...
+title: "beeNotice's blog"
+description: "Yet Another Technical blog about Java, Distributed Systems and Data"
 baseurl: ""
 url: "http://beenotice.github.io/"
-github_username:  beeNotice
+github_username: beeNotice
 
 # Build settings
 markdown: kramdown
