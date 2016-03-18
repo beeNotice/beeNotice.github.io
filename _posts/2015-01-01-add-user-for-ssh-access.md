@@ -42,6 +42,7 @@ sudo service sshd reload
 
 {% highlight bash %}
 
+# Utiliser NOPASSWD ou PASSWD
 sudo vi /etc/sudoers.d/fmartin
 	=> fmartin                 ALL=(ALL) PASSWD: ALL
 

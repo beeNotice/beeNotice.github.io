@@ -8,6 +8,7 @@
 
 .color-grey { color: #777; }
 .no-border { border: none; }
+dd { margin-left : 20px; }
 
 #footer-content { text-align: center; }
 
@@ -18,7 +19,15 @@
 
 #article-content {
 	margin-bottom: 30px;
+	blockquote { font-size : 12.5px; }
 	.h2, h2 { font-size: 20px; }
+	h2:before {
+	   content: "// ";
+	   letter-spacing: -2px;
+	   padding-right: 5px;
+	   color: #7DAF27;
+	}
+	.h3, h3, .h4, h4, .h5, h5, .h6, h6  { font-size: 16px; }
 }
 
 .social-icon { padding: 1px 10px 0 0; }
